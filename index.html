@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+	</head>
+	<body>
+	<div class='container'>
+		<div class='row'>
+			<div id='new_form_div' class='col s12 m6 card-panel hoverable'>
+				<form id='new_form'>
+					<h3>Create New To-do Item</h3>
+					<label for='new_name'>Name</label>
+					<input type='text' id='new_name' name='name' placeholder='Item name' required /> <br>
+					<label for='new_priority'>Priority (1 - 10)</label>
+					<input type='number' name='priority' id='new_priority' max='10' min='1' required /> <br>
+					<input type='checkbox' name='complete' id='new_complete' value='1' />
+					<label for='new_complete'>Complete?</label>  <br> <br>
+					<input type='submit' class='btn'>
+				</form>
+			</div>
+
+
+			<div id='edit_form_div' class='no-display col s12 m6'>
+				<form id='edit_form'>
+					<h3>Edit To-do Item</h3>
+					<label for='edit_name'>Name</label>
+					<input type='text' id='edit_name' name='name' placeholder='Item name' required /> <br>
+					<label for='new_priority'>Priority (1 - 10)</label>
+					<input type='number' name='priority' id='edit_priority' max='10' min='1' required /> <br>
+					<input type='checkbox' name='complete' id='edit_complete' />
+					<label for='new_complete'>Complete?</label>  <br> <br>
+					<input type='hidden' id='array_pos'>
+					<input type='submit' class='btn'>
+				</form>
+			</div>
+		</div>
+
+		
+		<div id='list_div' class='row'>
+			<div class='col 12s m6'>
+				<h3>To Do List</h3>
+				<ul id='list_ul'</ul>
+			</div>
+			<div class='col 12s m6'>
+				<h3>Completed!</h3>
+				<ul id='completed_list_ul'></ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/babel" src='main.js'></script>
+	</body>
+</html>
